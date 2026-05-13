@@ -1,0 +1,167 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# IDE específicos
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Archivos del proyecto específicos
+# Modelos entrenados (son grandes, mejor no subir a git)
+models_shared/
+*.pt
+*.pth
+*.ckpt
+
+# Datos (no subir datasets grandes)
+data/
+features/
+
+# Resultados (excepto READMEs)
+results/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+!results/README.md
+
+# Logs y archivos temporales
+logs/
+*.log
+*.tmp
+*.temp
+*.out
+*.err
+
+# Archivos de respaldo
+*.bak
+*.backup
+*.old
+*.orig
+
+# Archivos de compresión
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Archivos de configuración local
+config.local.py
+.env.local
+*.local
+
+# Archivos grandes generados por experimentos
+experiment_*.png
+gate_weights_*.png
+routing_*.png
+*_functions_*.png
+
+# Dataset de Kaggle (si lo descargaste)
+*.csv
+*.jpeg
+*.jpg
+!requirements.txt
+
+# Carpeta de análisis temporal
+analysis/
+temp/
+tmp/
+
+# Archivos de Python no relevantes
+*.pyc
+*.pyo
+*.pyd

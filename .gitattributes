@@ -1,0 +1,18 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Archivos de modelo (git LFS si usas)
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.ckpt filter=lfs diff=lfs merge=lfs -text
+
+# Imágenes como binarios
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+
+# Datasets
+*.csv binary
+*.h5 binary
+*.npy binary
