@@ -1,4 +1,4 @@
-# Modular Addition Mixture of Experts (MoE)
+# Modular Addition with Mixture of Experts
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-ee4c2c.svg)](https://pytorch.org/)
@@ -6,26 +6,24 @@
 
 ## 🧠 Descripción
 
-Implementación de una arquitectura **Mixture of Experts (Shared Expert MoE)** para aprender operaciones de suma modular, replicando y extendiendo los experimentos de OpenAI sobre especialización de expertos.
+Este repositorio implementa experimentos con arquitectura **Mixture of Experts (MoE)** para aprender operaciones de **suma modular** `(a + b) mod n`. 
 
-### Descubrimientos clave
+Inspirado en los experimentos de OpenAI sobre especialización de expertos, este proyecto demuestra que:
 
-- ✅ **Especialización automática**: Los expertos aprenden diferentes regiones del espacio de suma modular
-- ✅ **Módulos no primos son más fáciles**: Contraintuitivamente, ℤ/6ℤ muestra mejor especialización que ℤ/5ℤ o ℤ/7ℤ
-- ✅ **Estructura algebraica emergente**: La red descubre subgrupos y cosets automáticamente
+- ✅ Los expertos se especializan automáticamente en diferentes regiones del espacio
+- ✅ **Módulos NO primos** (ej. 6) muestran mejor especialización que primos
+- ✅ La estructura algebraica emerge sin supervisión explícita
 - ✅ **60x más rápido** que implementaciones baseline
 
-## 📊 Resultados Experimentales
+## 📊 Resultados Clave
 
-### Entropía de enrutamiento (menor = mejor especialización)
+### Especialización por módulo (4 expertos)
 
 | Módulo | Tipo | Entropía | Expertos activos | Patrón |
 |--------|------|----------|------------------|--------|
-| 6 | No primo | **0.323** | 4/4 | Franjas diagonales |
-| 5 | Primo | 0.440 | 3/4 | Bloques 2×2, 3×3 |
-| 7 | Primo | 0.447 | 4/4 | Franjas + ruido |
-| 10 | Compuesto | 0.519 | 2/4 | Diagonal binaria |
+| **6** | No primo | **0.323** | 4/4 | Franjas diagonales perfectas |
+| **5** | Primo | 0.440 | 3/4 | Bloques 2×2 y 3×3 |
+| **7** | Primo | 0.447 | 4/4 | Franjas con ruido |
+| **10** | Compuesto | 0.519 | 2/4 | Diagonal binaria |
 
-### Matrices de enrutamiento
-
-**Módulo 5 (4 expertos):**
+### Matriz de enrutamiento - Módulo 6 (mejor especialización)
